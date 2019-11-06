@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: lighten($color-tertiary, 15%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color-secondary;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: lighten($color-secondary,15%);
+}
+
+html {
+    // this defines what 1rem is 
+    font-size: 62.5%; // 1rem = 10px / 16px = 62.5%
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    animation-name: documentOverflow;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+    ::selection {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+
+    ::placeholder {
+        color: $color-white;
+    }
+}

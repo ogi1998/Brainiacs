@@ -1,0 +1,74 @@
+.aboutus {
+    padding: 5rem 0;
+
+    &__title {}
+
+    &__subtitle {}
+
+    // TEAM IS CONTAINER FOR ALL
+
+    &__team {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // TEAM ITEM IS ONE PERSON
+
+    &__team__item {
+        width: 25%;
+        flex-grow: 1;
+        text-align: center;
+        margin: 4rem 4rem;
+    }
+
+    &__img {
+        width: 20vw;
+        border-radius: 50%;
+        background-color: red;
+    }
+
+    &__name {
+        position: relative;
+        color: $color-white;
+        font-size: 3rem;
+        margin-top: 4rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 150%;
+            left: 30%;
+            width: 39%;
+            height: .4rem;
+            border-radius: 1rem;
+            background-color: $color-primary;
+        }
+
+    }
+
+    &__job {
+        color: $color-white;
+        font-size: 3rem;
+        font-weight: 400;
+        margin-top: 5rem;
+    }
+
+    &__socials {
+        margin: 4rem 0;
+
+        i {
+            color: $color-primary;
+            font-size: 2rem;
+            display: inline-block;
+            margin: 0 2rem;
+
+            &:hover {
+                text-shadow: $color-primary 0 .3rem 3rem;
+                cursor: pointer;
+            }
+        }
+    }
+}

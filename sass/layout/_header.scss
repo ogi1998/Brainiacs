@@ -1,0 +1,125 @@
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../Untitled-1.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    animation-name: headerShow;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+    // NAVIGATION
+    &__nav {
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 20rem;
+        align-items: center;
+        z-index: 10000;
+        background-color:$color-tertiary;
+        box-shadow: 0 .3rem .6rem rgba($color-black, .15);
+    }
+
+    &__menu {
+        position: relative;
+        right: -70rem;
+        animation: menu cubic-bezier(.51,.21,.69,1.5) 1s forwards;
+        animation-delay: 3s;
+    }
+
+    &__logo {
+        position: relative;
+        left: -70rem;
+        color: $color-primary;
+        font-weight: 400;
+        font-size: 4rem;
+        text-shadow: $color-primary 0 .3rem 1rem;
+        transition: .1s ease-in-out;
+        z-index: 1000;
+        animation: logo cubic-bezier(.51,.21,.69, 1.5) 1s forwards;
+        animation-delay: 3s;
+
+
+        &:hover {
+            cursor: pointer;
+            text-shadow: $color-primary 0 .3rem 3rem;
+
+        }
+    }
+
+    &__menu__item {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 2rem;
+        position: relative;
+        transition: .3s ease-in-out;
+        z-index: 1000;
+
+        &:not(:last-child) {
+            margin-right: 4rem;
+        }
+
+        &:hover {
+            color: $color-primary;
+            text-shadow: $color-primary 0 .3rem 2rem;
+        }
+    }
+
+    // HERO SECTION
+
+    &__hero {
+        margin-top: 10rem;
+        z-index: 50;
+        position: relative;
+        padding: 0 20rem;
+
+    }
+
+    &__title {
+        color: $color-primary;
+        font-size: 15rem;
+        margin-bottom: 5rem;
+        text-shadow: $color-primary 0 .3rem 1.5rem;
+        z-index: 50;
+        position: relative;
+    }
+
+    &__subtitle {
+        color: $color-white;
+        font-size: 2rem;
+        width: 30%;
+        font-weight: 300;
+        line-height: 3rem;
+        margin-bottom: 5rem;
+        z-index: 99;
+        position: relative;
+    }
+
+    &__action {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-white;
+        display: inline-block;
+        background-color: $color-tertiary;
+        font-size: 3rem;
+        padding: 2rem 6rem;
+        border-radius: 50px;
+        box-shadow: 0 .3rem 1rem $color-tertiary;
+        position: relative;
+        z-index: 99;
+        transition: .2s ease-in;
+
+        &:hover {
+            background-color: lighten($color-tertiary, 5%);
+            box-shadow: 0 .3rem 3rem lighten($color-tertiary, 5%);;
+        }
+    }
+}

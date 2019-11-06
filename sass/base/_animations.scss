@@ -1,0 +1,89 @@
+// Animation to animate menu inside of navbar
+@keyframes menu {
+    from {
+        right: -70rem;
+
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+// Animation to animate logo inside of navbar
+
+@keyframes logo {
+    from {
+        left: -70rem;
+    }
+
+    to {
+        left: 0;
+
+    }
+}
+
+
+// Animation to animate icons inside of skills 
+
+@keyframes brush {
+    from {
+        transform: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes projects {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes loading {
+    from {
+            transform: rotate(0deg);
+    }
+    to {
+            transform: rotate(360deg);
+    }
+}
+
+@keyframes loadingRemove {
+    from {
+        opacity: 1;
+        display: block;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes headerShow {
+    from {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    to {
+        opacity: 1;
+        z-index: 1000;
+    }
+}
+
+@keyframes documentOverflow {
+    from {
+        overflow-y: hidden;
+    }
+
+    to {
+        overflow-y: scroll;
+    }
+}

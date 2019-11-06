@@ -1,0 +1,120 @@
+.footer {
+    padding: 5rem 0;
+    background-color: $color-tertiary;
+    animation-name: headerShow;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+    &__navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 20rem;
+    }
+
+    &__logo {
+        text-decoration: none;
+        color: $color-primary;
+        font-size: 5rem;
+        padding: 0 4rem;
+
+        &:hover {
+            text-shadow: $color-primary 0 .3rem 3rem;
+        }
+    }
+
+    &__menu {
+        border-left: 1px solid $color-primary;
+        border-right: 1px solid $color-primary;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 4rem;
+    }
+
+    &__menu__item {
+        text-decoration: none;
+        color: $color-primary;
+        display: inline-block;
+        font-size: 2.5rem;
+
+        &:not(:last-child) {
+            margin-right: 4rem;
+        }
+
+        &:hover {
+            text-shadow: $color-primary 0 .3rem 3rem;
+        }
+    }
+
+    &__socials__container {
+        display: flex;
+        flex-direction: row;
+
+        h3 {
+            color: $color-primary;
+            font-size: 3rem;
+            margin-left: 2rem;
+            margin-bottom: 3rem;
+
+            &:hover {
+                text-shadow: $color-primary 0 .3rem 3rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__socials__container__left {
+        justify-content: center;
+        margin-left: 4rem;
+        widows: 150%
+    }
+
+    &__socials {
+        i {
+            color: $color-primary;
+            font-size: 2rem;
+
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+
+            &:hover {
+                text-shadow: $color-primary 0 .3rem 3rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__socials__container__right {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn__to__top {
+        text-decoration: none;
+        color: $color-primary;
+        font-size: 8rem;
+        margin-left: 8rem;
+
+        &:hover {
+            text-shadow: $color-primary 0 .3rem 3rem;
+        }
+    }
+
+
+
+    // &__copyright {
+    //     padding: 0 20rem;
+    //     background-color: $color-tertiary;
+    //     color: $color-white;
+    //     text-align: center;
+    //     address {
+    //         font-size: 3rem;
+    //         padding: 3rem 0;
+    //     }
+    // }
+}

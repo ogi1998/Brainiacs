@@ -1,0 +1,184 @@
+.contact {
+    padding: 5rem 0;
+    padding-bottom: 15rem;
+    display: flex;
+    flex-direction: row;
+
+    &__left {
+        width: 50%;
+        margin-right: 2rem;
+    }
+
+    // LEFT
+
+    &__title {
+        font-weight: 400;
+        text-align: left;
+        margin-bottom: 4rem;
+    }
+
+    &__desc {
+        font-size: 2.5rem;
+        color: $color-white;
+        width: 80%;
+    }
+
+    &__location {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10rem;
+        i {
+            color: $color-primary;
+            font-size: 7rem;
+            width: 5vw;
+            &:hover {
+                text-shadow: $color-primary 0 .3rem 3rem;
+                cursor: pointer;
+            }
+        }
+
+        p {
+            font-size: 2.5rem;
+            color: $color-white;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 5rem;
+        i {
+            color: $color-primary;
+            font-size: 7rem;
+            width: 5vw;
+            &:hover {
+                text-shadow: $color-primary 0 .3rem 3rem;
+                cursor: pointer;
+            }
+        }
+
+        p {
+            font-size: 2.5rem;
+            color: $color-white;
+        }
+    }
+
+    &__email {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 5rem;
+        i {
+            color: $color-primary;
+            font-size: 7rem;
+            width: 5vw;
+            &:hover {
+                text-shadow: $color-primary 0 .3rem 3rem;
+                cursor: pointer;
+            }
+        }
+
+        p {
+            font-size: 2.5rem;
+            color: $color-white;
+        }
+    }
+
+    &__right {
+        padding-top: 5rem;
+        width: 50%;
+    }
+
+    // RIGHT
+
+    &__name__input {
+        border: 0;
+        outline: 0;
+        color: $color-white;
+        background-color: $color-tertiary;
+        padding: 2rem 2rem;
+        font-size: 2rem;
+        width: 90%;
+        border-radius: 5rem;
+        
+        &:focus, &:hover {
+            background-color: lighten($color-tertiary, 5%);
+            box-shadow: 0 .3rem 3rem $color-tertiary;
+        }
+    }
+
+    &__input__group {
+        display: flex;
+        flex-direction: row;
+        margin-top: 8rem;
+    }
+    &__email__input {
+        border: 0;
+        outline: 0;
+        color: $color-white;
+        background-color: $color-tertiary;
+        padding: 2rem 2rem;
+        font-size: 2rem;
+        width: 40%;
+        border-radius: 5rem;
+        margin-right: 8rem;
+        &:focus, &:hover {
+            background-color: lighten($color-tertiary, 5%);
+            box-shadow: 0 .3rem 3rem $color-tertiary;
+        }
+    }
+
+    &__phone__input {
+        border: 0;
+        outline: 0;
+        color: $color-white;
+        background-color: $color-tertiary;
+        padding: 2rem 2rem;
+        font-size: 2rem;
+        width: 40%;
+        border-radius: 5rem;
+        &:focus, &:hover {
+            background-color: lighten($color-tertiary, 5%);
+            box-shadow: 0 .3rem 3rem $color-tertiary;
+        }
+    }
+
+    &__msg__input {
+        border: 0;
+        outline: 0;
+        color: $color-white;
+        background-color: $color-tertiary;
+        padding: 2rem 4rem;
+        font-size: 2rem;
+        width: 90%;
+        border-radius: 5rem;
+        margin-top: 8rem;
+        resize: none;
+        &:focus, &:hover {
+            background-color: lighten($color-tertiary, 5%);
+            box-shadow: 0 .3rem 3rem $color-tertiary;
+        }
+    }
+
+    &__submit {
+        display: block;
+        border: 0;
+        width: 90%;
+        color: $color-white;
+        background-color: $color-tertiary;
+        font-size: 3rem;
+        border-radius: 5rem;
+        padding: 2rem 0;
+        margin-top: 8rem;
+        box-shadow: 0 .3rem 1rem $color-tertiary;
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color-tertiary, 5%);
+            box-shadow: 0 .3rem 3rem lighten($color-tertiary, 5%);
+        }
+
+    }
+
+}

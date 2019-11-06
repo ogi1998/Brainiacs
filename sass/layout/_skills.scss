@@ -1,0 +1,43 @@
+.skills {
+    background-color: $color-secondary;
+    display: flex;
+    flex-direction: row;
+    padding: 10rem 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+
+    &__icon {
+        color: $color-primary;
+        font-size: 5rem;
+        margin-bottom: 5rem;
+
+        &:hover {
+            text-shadow: $color-primary 0 .3rem 3rem;
+            cursor: pointer;
+            
+        }
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 3rem;
+        height: 10vh;
+        text-align: center;
+    }
+
+    &__desc {
+        color: $color-white;
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
