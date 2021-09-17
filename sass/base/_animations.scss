@@ -1,4 +1,5 @@
 // Animation to animate menu inside of navbar
+
 @keyframes menu {
     from {
         right: -70rem;
@@ -7,6 +8,16 @@
 
     to {
         right: 0;
+    }
+}
+
+@keyframes menuRemove {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: -70;
     }
 }
 
@@ -36,36 +47,51 @@
     }
 }
 
+// Animation to animate project cards inside of projects section 
+
 @keyframes projects {
     from {
         opacity: 0;
         width: 0;
     }
+
     to {
         opacity: 1;
         width: 100%;
     }
 }
 
+// Animation to animate loading image 
+
 @keyframes loading {
     from {
-            transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-            transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
+// This is to animate removal (fading out) of loading
+
 @keyframes loadingRemove {
     from {
+        clip-path: circle(0.4% at 50% 50%);
         opacity: 1;
         display: block;
     }
+
     to {
+        clip-path: circle(50.0% at 50% 50%);
         opacity: 0;
         display: none;
     }
 }
+
+
+// Same as loading, animation to make header fade in 
+
 @keyframes headerShow {
     from {
         opacity: 0;
@@ -77,6 +103,8 @@
         z-index: 1000;
     }
 }
+
+// When loading is on I disabled page scrolling, so when loading is finished I need to enable it again 
 
 @keyframes documentOverflow {
     from {

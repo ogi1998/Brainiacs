@@ -16,17 +16,19 @@
 	</head>
 
 	<body>
-		
 		<header class="header" id="header">
 			<div class="header__nav">
 				<div class="header__logo">
-					<p>LOGO STUDIO</p>
+					<p>The Brainiacs</p>
 				</div>
-				<div class="header__menu">
-					<a class="header__menu__item" href="#">Home</a>
-					<a class="header__menu__item" href="#">About</a>
-					<a class="header__menu__item" href="#">Contact</a>
-					<a class="header__menu__item" href="#">Projects</a>
+				<a href="javascript:void(0)" class="header__toggle" id="toggle"><i class="fas fa-bars"></i></a>
+				<a href="javascript:void(0)" class="header__menu__close" id="menu-close"><i class="fas fa-times"></i></a>
+				<div class="header__menu" id="menu">
+					<a class="header__menu__item header__menu__item__active" href="#">Home</a>
+					<a class="header__menu__item" href="#skills">Skills</a>
+					<a class="header__menu__item" href="#projects">Projects</a>
+					<a class="header__menu__item" href="#aboutus">About</a>
+					<a class="header__menu__item" href="#contact">Contact</a>
 				</div>
 			</div>
 			<div class="header__hero">
@@ -37,16 +39,16 @@
 				<p class="header__subtitle">
 					Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
 				</p>
-				<a href="#" class="header__action">Get Started</a>
+				<a href="#contact" class="header__action">Get Started</a>
 			</div>
+			<a href="#header" class="btn__to__top" id="top"><i class="fas fa-arrow-up"></i></a>
 		</header>
-
 		<!-- MAIN SECTION -->
 
 		<main class="main" id="main">
-			<section class="skills">
+			<section class="skills" id="skills">
 				<div class="skills__container">
-					<i class="skills__icon" ><i class="fas fa-paint-brush"></i></i>
+					<i class="skills__icon"><i class="fas fa-paint-brush"></i></i>
 					<h1 class="skills__title">WEB DESIGN</h1>
 					<p class="skills__desc">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sed tempore vitae
@@ -83,14 +85,14 @@
 				</div>
 			</section>
 
-			<section class="projects" >
+			<section class="projects" id="projects">
 				<div class="projects__categories">
 					<a href="#" class="projects__categories__item">LOGOTYPE</a>
 					<a href="#" class="projects__categories__item">ILUSTRATION</a>
 					<a href="#" class="projects__categories__item">WEB</a>
 					<a href="#" class="projects__categories__item">PHOTOGRAPHY</a>
 				</div>
-				<div class="projects__container" id="projects">
+				<div class="projects__container" id="projects-container">
 					<div class="projects__container__item">&nbsp;</div>
 					<div class="projects__container__item">&nbsp;</div>
 					<div class="projects__container__item">&nbsp;</div>
@@ -100,7 +102,7 @@
 				</div>
 			</section>
 
-			<section class="aboutus">
+			<section class="aboutus" id="aboutus">
 				<h1 class="heading-primary aboutus__title">YOUR TEAM</h1>
 				<h3 class="heading-secondary aboutus__subtitle">
 					In case you want to get in touch with us, here is a brief look of our pictures and social
@@ -108,8 +110,8 @@
 				</h3>
 				<div class="aboutus__team">
 					<div class="aboutus__team__item">
-						<img src="./person.jpg" alt="Person" class="aboutus__img" />
-						<h3 class="aboutus__name">STEFAN RAČIĆ</h3>
+						<img src="img/person.jpg" alt="Person" class="aboutus__img" />
+						<h3 class="aboutus__name">STEFAN</h3>
 						<h5 class="aboutus__job">CEO</h5>
 						<div class="aboutus__socials">
 							<i class="fab fa-facebook-f"></i>
@@ -120,8 +122,8 @@
 						</div>
 					</div>
 					<div class="aboutus__team__item">
-						<img src="./person.jpg" alt="Person" class="aboutus__img" />
-						<h3 class="aboutus__name">SANJA TENDŽERIĆ</h3>
+						<img src="img/person.jpg" alt="Person" class="aboutus__img" />
+						<h3 class="aboutus__name">SANJA</h3>
 						<h5 class="aboutus__job">Marketing</h5>
 						<div class="aboutus__socials">
 							<i class="fab fa-facebook-f"></i>
@@ -132,8 +134,8 @@
 						</div>
 					</div>
 					<div class="aboutus__team__item">
-						<img src="./person.jpg" alt="Person" class="aboutus__img" />
-						<h3 class="aboutus__name">IRINEJ KAHVIĆ</h3>
+						<img src="img/person.jpg" alt="Person" class="aboutus__img" />
+						<h3 class="aboutus__name">IRINEJ</h3>
 						<h5 class="aboutus__job">Designer</h5>
 						<div class="aboutus__socials">
 							<i class="fab fa-facebook-f"></i>
@@ -144,8 +146,8 @@
 						</div>
 					</div>
 					<div class="aboutus__team__item">
-						<img src="./person.jpg" alt="Person" class="aboutus__img" />
-						<h3 class="aboutus__name">BORIS GVOZDERAC</h3>
+						<img src="img/person.jpg" alt="Person" class="aboutus__img" />
+						<h3 class="aboutus__name">BORIS</h3>
 						<h5 class="aboutus__job">Designer</h5>
 						<div class="aboutus__socials">
 							<i class="fab fa-facebook-f"></i>
@@ -156,8 +158,8 @@
 						</div>
 					</div>
 					<div class="aboutus__team__item">
-						<img src="./person.jpg" alt="Person" class="aboutus__img" />
-						<h3 class="aboutus__name">OGNJEN VUJASINOVIĆ</h3>
+						<img src="img/person.jpg" alt="Person" class="aboutus__img" />
+						<h3 class="aboutus__name">OGNJEN</h3>
 						<h5 class="aboutus__job">Developer</h5>
 						<div class="aboutus__socials">
 							<i class="fab fa-facebook-f"></i>
@@ -168,8 +170,8 @@
 						</div>
 					</div>
 					<div class="aboutus__team__item">
-						<img src="./person.jpg" alt="Person" class="aboutus__img" />
-						<h3 class="aboutus__name">NEBOJŠA BOJIĆ</h3>
+						<img src="img/person.jpg" alt="Person" class="aboutus__img" />
+						<h3 class="aboutus__name">NEBOJŠA</h3>
 						<h5 class="aboutus__job">Developer</h5>
 						<div class="aboutus__socials">
 							<i class="fab fa-facebook-f"></i>
@@ -182,8 +184,8 @@
 				</div>
 			</section>
 
-			<section class="testimonials">
-				<h1 class="heading-primary testimonials__title">WHAT OUR CLIENTS SAY</h1>
+			<section class="testimonials" id="testimonials">
+				<h1 class="heading-primary testimonials__title">WHAT OUR CLIENTS HAVE TO SAY ABOUT US!</h1>
 				<h3 class="heading-secondary testimonials__subtitle">
 					Here are a couple of clients who can tell something about us!
 				</h3>
@@ -193,7 +195,7 @@
 						<h3 class="testimonials__comment">
 							Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
 						</h3>
-						<img src="./person.jpg" alt="Person" class="testimonials__img" />
+						<img src="img/person.jpg" alt="Person" class="testimonials__img" />
 						<div class="testimonials__name">SARAH-JANE PALMER</div>
 						<div class="testimonials__job">Fashion Designer</div>
 					</div>
@@ -202,7 +204,7 @@
 						<h3 class="testimonials__comment">
 							Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
 						</h3>
-						<img src="./person.jpg" alt="Person" class="testimonials__img" />
+						<img src="img/person.jpg" alt="Person" class="testimonials__img" />
 						<div class="testimonials__name">SARAH-JANE PALMER</div>
 						<div class="testimonials__job">Fashion Designer</div>
 					</div>
@@ -211,14 +213,14 @@
 						<h3 class="testimonials__comment">
 							Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
 						</h3>
-						<img src="./person.jpg" alt="Person" class="testimonials__img" />
+						<img src="img/person.jpg" alt="Person" class="testimonials__img" />
 						<div class="testimonials__name">SARAH-JANE PALMER</div>
 						<div class="testimonials__job">Fashion Designer</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="contact">
+			<section class="contact" id="contact">
 				<div class="contact__left">
 					<h1 class=" heading-primary contact__title">Lets Get In Touch!</h1>
 					<p class="contact__desc">
@@ -252,6 +254,7 @@
 						id="name"
 						class="contact__name__input"
 						placeholder="Name"
+						required
 					/>
 					<div class="contact__input__group">
 						<input
@@ -260,6 +263,7 @@
 							id="email"
 							class="contact__email__input"
 							placeholder="Email"
+							required
 						/>
 						<input
 							type="text"
@@ -267,6 +271,7 @@
 							id="phone"
 							class="contact__phone__input"
 							placeholder="Phone"
+							required
 						/>
 					</div>
 					<textarea
@@ -276,6 +281,7 @@
 						rows="10"
 						class="contact__msg__input"
 						placeholder="Type Your Message"
+						required
 					></textarea>
 					<input type="submit" value="Get Started" class="contact__submit" />
 				</form>
@@ -287,31 +293,27 @@
 				<a href="#" class="footer__logo">LOGO</a>
 				<div class="footer__menu">
 					<a href="#" class="footer__menu__item">HOME</a>
-					<a href="#" class="footer__menu__item">ABOUT</a>
-					<a href="#" class="footer__menu__item">SKILLS</a>
-					<a href="#" class="footer__menu__item">PROJECTS</a>
-					<a href="#" class="footer__menu__item">CONTACT</a>
+					<a href="#aboutus" class="footer__menu__item">ABOUT</a>
+					<a href="#skills" class="footer__menu__item">SKILLS</a>
+					<a href="#projects" class="footer__menu__item">PROJECTS</a>
+					<a href="#contact" class="footer__menu__item">CONTACT</a>
 				</div>
 				<div class="footer__socials__container">
-					<div class="footer__socials__container__left">
-						<h3>FOLLOW US</h3>
-						<div class="footer__socials">
-							<i class="fab fa-facebook-f"></i>
-							<i class="fab fa-twitter"></i>
-							<i class="fab fa-instagram"></i>
-							<i class="fab fa-dribbble"></i>
-							<i class="fab fa-linkedin-in"></i>
-						</div>
-					</div>
-					<div class="footer__socials__container__right">
-						<a href="#header" class="footer__btn__to__top"><i class="fas fa-arrow-up"></i></a>
+					<h3>FOLLOW US</h3>
+					<div class="footer__socials">
+						<i class="fab fa-facebook-f"></i>
+						<i class="fab fa-twitter"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-dribbble"></i>
+						<i class="fab fa-linkedin-in"></i>
 					</div>
 				</div>
 			</div>
 		</footer>
 		<div class="loading" id="loading">
-				<img src="loading_small_1.png" alt="Loading">
-			</div>
+			<h3 id="loadingCount">100%</h3>
+			<img src="img/loading.png" alt="Loading" />
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>

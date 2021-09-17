@@ -6,8 +6,34 @@ main {
     animation-delay: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
+    box-shadow: 0 -1rem .6rem rgba($color-black, .5);
+
+    @include respond(phone) {
+        padding: 0;
+    }
 }
 
+.btn__to__top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 4rem;
+    padding: 3.5rem;
+    transition: .2s ease-in;
+    display: none;
+
+    @include respond(phone) {
+        padding: 3.5rem .5rem;
+    }
+
+    &:hover {
+        color: $color-yellow;
+    }
+}
+
+// Loading page 
 .loading {
     background-color: $color-quaternary;
     position: absolute;
@@ -24,7 +50,17 @@ main {
     animation-fill-mode: forwards;
 
     img {
-        display: block;
         animation: loading 2s infinite linear;
+    }
+
+    #loadingCount {
+        color: white;
+        position: relative;
+        left: 10rem;
+
+        @include respond(phone) {
+            font-size: 1.5rem;
+            left: 14rem;
+        }
     }
 }

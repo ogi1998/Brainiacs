@@ -11,17 +11,28 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0 20rem;
+        justify-content: center;
+
+        @include respond(phone) {
+            padding: 0;
+        }
     }
 
     &__logo {
         text-decoration: none;
         color: $color-primary;
-        font-size: 5rem;
-        padding: 0 4rem;
+        font-size: 3rem;
+        margin-right: 2rem;
+
+
+
+        @include respond(phone) {
+            font-size: 3rem;
+        }
 
         &:hover {
-            text-shadow: $color-primary 0 .3rem 3rem;
+            text-shadow: $color-yellow 0 .3rem 3rem;
+            color: $color-yellow;
         }
     }
 
@@ -33,88 +44,78 @@
         align-items: center;
         justify-content: center;
         padding: 0 4rem;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__menu__item {
         text-decoration: none;
         color: $color-primary;
         display: inline-block;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+        transition: .3s ease-in-out;
 
         &:not(:last-child) {
             margin-right: 4rem;
         }
 
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            left: 0;
+            width: 0;
+            height: 3px;
+            border-radius: 1rem;
+            background-color: $color-primary;
+            transition: .2s ease-in;
+            // transform: rotateX(180deg);
+        }
+
         &:hover {
-            text-shadow: $color-primary 0 .3rem 3rem;
+            color: $color-yellow;
+            text-shadow: $color-primary 0 .3rem 2rem;
+            text-shadow: $color-yellow 0 .3rem 2rem;
+            transform: scale(1.2);
+
+            &::after {
+                width: 100%;
+                background-color: $color-yellow;
+            }
         }
     }
 
     &__socials__container {
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         h3 {
             color: $color-primary;
-            font-size: 3rem;
-            margin-left: 2rem;
-            margin-bottom: 3rem;
+            font-size: 2rem;
+            margin: 0 2rem;
 
-            &:hover {
-                text-shadow: $color-primary 0 .3rem 3rem;
-                cursor: pointer;
+            @include respond(phone) {
+                margin-left: 1rem;
             }
         }
     }
-
-    &__socials__container__left {
-        justify-content: center;
-        margin-left: 4rem;
-        widows: 150%
-    }
-
     &__socials {
         i {
             color: $color-primary;
-            font-size: 2rem;
+            font-size: 1.5rem;
 
             &:not(:last-child) {
-                margin-right: 3rem;
+                margin-right: 1.5rem;
             }
 
             &:hover {
-                text-shadow: $color-primary 0 .3rem 3rem;
+                text-shadow: $color-yellow 0 .3rem 3rem;
+                color: $color-yellow;
                 cursor: pointer;
             }
         }
     }
-
-    &__socials__container__right {
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__btn__to__top {
-        text-decoration: none;
-        color: $color-primary;
-        font-size: 8rem;
-        margin-left: 8rem;
-
-        &:hover {
-            text-shadow: $color-primary 0 .3rem 3rem;
-        }
-    }
-
-
-
-    // &__copyright {
-    //     padding: 0 20rem;
-    //     background-color: $color-tertiary;
-    //     color: $color-white;
-    //     text-align: center;
-    //     address {
-    //         font-size: 3rem;
-    //         padding: 3rem 0;
-    //     }
-    // }
 }

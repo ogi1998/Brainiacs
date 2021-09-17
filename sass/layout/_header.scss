@@ -1,8 +1,9 @@
 .header {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../Untitled-1.png");
+    background: linear-gradient(rgba($color-tertiary, 0.5), rgba($color-tertiary, 0.5)), url("../../img/header.png");
     background-size: auto;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 0;
     position: relative;
     overflow: hidden;
@@ -12,6 +13,11 @@
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 
+    @include respond(phone) {
+        height: 100vh;
+
+    }
+
     // NAVIGATION
     &__nav {
         position: fixed;
@@ -19,36 +25,93 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 2rem 20rem;
+        padding: 1.5rem 20rem;
         align-items: center;
         z-index: 10000;
-        background-color:$color-tertiary;
+        background-color: $color-tertiary;
         box-shadow: 0 .3rem .6rem rgba($color-black, .15);
+
+        @include respond(phone) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            padding-top: 4rem;
+            padding-bottom: 0;
+        }
+
+
     }
 
     &__menu {
         position: relative;
         right: -70rem;
-        animation: menu cubic-bezier(.51,.21,.69,1.5) 1s forwards;
+        animation: menu cubic-bezier(.51, .21, .69, 1.5) 1s forwards;
+        animation-delay: 2s;
+
+        @include respond(phone) {
+            margin-top: 2rem;
+            display: none;
+            animation-delay: 0s;
+            width: 100vw;
+        }
+    }
+
+    // Hamburger icon 
+    &__toggle {
+        display: none;
+        font-size: 4rem;
+        color: $color-primary;
+        text-decoration: none;
+        align-self: flex-end;
+        position: relative;
+        right: -70rem;
+        animation: menu cubic-bezier(.51, .21, .69, 1.5) 1s forwards;
         animation-delay: 3s;
+
+        @include respond(phone) {
+            display: block;
+            bottom: 4.5rem;
+            padding-right: 4rem;
+        }
+    }
+
+
+    // Icon to close menu
+    &__menu__close {
+        display: none;
+        font-size: 4rem;
+        color: $color-primary;
+        text-decoration: none;
+
+        @include respond(phone) {
+            position: absolute;
+            top: 6%;
+            right: 7.5%;
+        }
     }
 
     &__logo {
         position: relative;
         left: -70rem;
-        color: $color-primary;
+        color: $color-yellow;
         font-weight: 400;
-        font-size: 4rem;
-        text-shadow: $color-primary 0 .3rem 1rem;
+        font-size: 3rem;
         transition: .1s ease-in-out;
         z-index: 1000;
-        animation: logo cubic-bezier(.51,.21,.69, 1.5) 1s forwards;
+        animation: logo cubic-bezier(.51, .21, .69, 1.5) 1s forwards;
         animation-delay: 3s;
+
+        @include respond(phone) {
+            padding-left: 2rem;
+        }
+
 
 
         &:hover {
             cursor: pointer;
             text-shadow: $color-primary 0 .3rem 3rem;
+            text-shadow: $color-yellow 0 .3rem 3rem;
+            color: $color-yellow;
 
         }
     }
@@ -58,38 +121,144 @@
         text-decoration: none;
         color: $color-white;
         text-transform: uppercase;
-        font-size: 2rem;
+        font-size: 1.5rem;
         position: relative;
         transition: .3s ease-in-out;
         z-index: 1000;
 
+        @include respond(phone) {
+            display: block;
+            text-align: center;
+            width: 100vw;
+            font-size: 3rem;
+            padding: 2rem 0;
+
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            left: 0;
+            width: 0;
+            height: 3px;
+            border-radius: 1rem;
+            background-color: $color-primary;
+            background-color: $color-yellow;
+            transition: .2s ease-in;
+            // transform: rotateX(180deg);
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
         &:not(:last-child) {
             margin-right: 4rem;
+
+            @include respond(phone) {
+                margin: 0;
+            }
         }
 
         &:hover {
-            color: $color-primary;
+            color: $color-yellow;
             text-shadow: $color-primary 0 .3rem 2rem;
+            text-shadow: $color-yellow 0 .3rem 2rem;
+            transform: scale(1.2);
+            font-weight: bold;
+
+            @include respond(phone) {
+                background-color: $color-secondary;
+            }
+
+            &::after {
+                width: 100%;
+            }
         }
+    }
+    &__menu__item__active {
+            color: $color-yellow;
+            text-shadow: $color-primary 0 .3rem 2rem;
+            text-shadow: $color-yellow 0 .3rem 2rem;
+            transform: scale(1.2);
+            font-weight: bold;
+            transition: .3s ease-in-out;
+
+            @include respond(phone) {
+                background-color: $color-secondary;
+            }
+
+                
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -30%;
+                left: 0;
+                width: 0;
+                height: 3px;
+                border-radius: 1rem;
+                background-color: $color-primary;
+                background-color: $color-yellow;
+                transition: .2s ease-in;
+                // transform: rotateX(180deg);
+    
+                @include respond(phone) {
+                    display: none;
+                }
+            }
+
+            &::after {
+                width: 100%;
+            }
+
+            @include respond(phone) {
+                display: block;
+                text-align: center;
+                width: 100vw;
+                font-size: 3rem;
+                padding: 2rem 0;
+    
+            }
+    
+            &:not(:last-child) {
+                margin-right: 4rem;
+    
+                @include respond(phone) {
+                    margin: 0;
+                }
+            }
+
     }
 
     // HERO SECTION
 
     &__hero {
-        margin-top: 10rem;
+        margin-top: 20rem;
         z-index: 50;
         position: relative;
         padding: 0 20rem;
+
+        @include respond(phone) {
+            margin-top: 30rem;
+            padding: 0;
+        }
 
     }
 
     &__title {
         color: $color-primary;
-        font-size: 15rem;
+        font-size: 8rem;
         margin-bottom: 5rem;
-        text-shadow: $color-primary 0 .3rem 1.5rem;
+        text-shadow: $color-primary 0 .3rem .6rem;
         z-index: 50;
         position: relative;
+
+        @include respond(phone) {
+            font-size: 8rem;
+            width: 100vw;
+            text-align: center;
+        }
     }
 
     &__subtitle {
@@ -101,6 +270,12 @@
         margin-bottom: 5rem;
         z-index: 99;
         position: relative;
+
+        @include respond(phone) {
+            text-align: center;
+            width: 100vw;
+            padding: 0 5rem;
+        }
     }
 
     &__action {
@@ -112,14 +287,23 @@
         font-size: 3rem;
         padding: 2rem 6rem;
         border-radius: 50px;
-        box-shadow: 0 .3rem 1rem $color-tertiary;
+        box-shadow: 0 .3rem 1rem rgba($color-black, .15);
         position: relative;
         z-index: 99;
         transition: .2s ease-in;
 
+        @include respond(phone) {
+            display: block;
+            text-align: center;
+            margin: 0 10rem;
+            font-size: 2.5rem;
+        }
+
         &:hover {
             background-color: lighten($color-tertiary, 5%);
-            box-shadow: 0 .3rem 3rem lighten($color-tertiary, 5%);;
+            box-shadow: 0 .3rem 1rem lighten($color-tertiary, 5%);
         }
     }
+
+
 }

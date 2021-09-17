@@ -1,35 +1,64 @@
 .projects {
     padding: 10rem 0;
 
+    @include respond(phone) {
+        width: 100vw;
+        height: 100%;
+    }
+
     &__categories {
         border-bottom: 1px solid $color-primary;
         margin: 5rem 0;
         padding-bottom: 2rem;
+        text-align: center;
+
+        @include respond(phone) {
+            width: 97.5vw;
+        }
     }
 
     &__categories__item {
         display: inline-block;
         text-decoration: none;
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: $color-primary;
         margin-right: 10rem;
         font-weight: bold;
 
+        @include respond(phone) {
+            text-align: center;
+            margin: 0;
+            display: block;
+            width: 100vw;
+            padding: 2rem 0;
+            font-size: 3rem;
+        }
+
         &:hover {
-            text-shadow: $color-primary 0 .3rem 3rem;
+            text-shadow: rgba($color-black, .5) 0 .3rem 1rem;
         }
     }
 
     &__container {
         width: 0;
         opacity: 0;
-        
+
         // animation: projects cubic-bezier(.51, .21, .69, 1.5) 1s forwards;
         display: grid;
         grid-column-gap: 15rem;
         grid-row-gap: 10rem;
         grid-template-columns: auto auto auto;
         z-index: -1;
+
+        @include respond(phone) {
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
     }
 
     &__container__item {
@@ -38,5 +67,17 @@
         background-color: $color-white;
         border-radius: 1rem;
         z-index: 1;
+        transition: .2s ease-in;
+
+        @include respond(phone) {
+            width: 50vw;
+            height: 25rem;
+            margin: 5rem 0;
+        }
+
+        &:hover {
+            box-shadow: 0 .3rem 1rem rgba($color-white, .15);
+            transform: scale(1.2);
+        }
     }
 }

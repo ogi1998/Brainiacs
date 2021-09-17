@@ -3,7 +3,9 @@
 
     &__title {}
 
-    &__subtitle {}
+    &__subtitle {
+        margin-bottom: 2rem;
+    }
 
     // TEAM IS CONTAINER FOR ALL
 
@@ -13,6 +15,10 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
 
     // TEAM ITEM IS ONE PERSON
@@ -22,18 +28,40 @@
         flex-grow: 1;
         text-align: center;
         margin: 4rem 4rem;
+        padding: 1rem;
+        background-color: $color-tertiary;
+        border-radius: 1rem;
+        border: 1px solid $color-tertiary;
+        transition: .2s ease-in;
+
+        @include respond(phone) {
+            width: 80%;
+            padding: 1rem 0;
+        }
+
+        &:hover {
+            background-color: $color-tertiary;
+            border: 1px solid $color-tertiary;
+            border-radius: 1rem;
+            box-shadow: 0 .3rem 3rem rgba($color-tertiary, .15);
+            transform: scale(1.2);
+        }
     }
 
     &__img {
-        width: 20vw;
+        width: 10vw;
         border-radius: 50%;
         background-color: red;
+
+        @include respond(phone) {
+            width: 15vw;
+        }
     }
 
     &__name {
         position: relative;
         color: $color-white;
-        font-size: 3rem;
+        font-size: 2em;
         margin-top: 4rem;
 
         &::after {
@@ -51,9 +79,13 @@
 
     &__job {
         color: $color-white;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 400;
         margin-top: 5rem;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
     }
 
     &__socials {
@@ -61,11 +93,16 @@
 
         i {
             color: $color-primary;
-            font-size: 2rem;
+            font-size: 1.5rem;
             display: inline-block;
             margin: 0 2rem;
 
+            @include respond(phone) {
+                font-size: 2.5rem;
+            }
+
             &:hover {
+                color: $color-yellow;
                 text-shadow: $color-primary 0 .3rem 3rem;
                 cursor: pointer;
             }
